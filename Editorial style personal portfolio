@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Personal Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root {
+    --primary: #1d4ed8;
+    --dark: #0f172a;
+    --gray: #64748b;
+    --bg: #f8fafc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", system-ui, sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--dark);
+    display: flex;
+}
+
+/* Sidebar */
+aside {
+    width: 260px;
+    height: 100vh;
+    position: fixed;
+    background: white;
+    padding: 30px 20px;
+    border-right: 1px solid #e5e7eb;
+}
+
+aside h2 {
+    margin-bottom: 30px;
+    color: var(--primary);
+}
+
+aside a {
+    display: block;
+    text-decoration: none;
+    color: var(--dark);
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+aside a:hover {
+    color: var(--primary);
+}
+
+/* Main Content */
+main {
+    margin-left: 260px;
+    padding: 60px;
+    width: 100%;
+}
+
+section {
+    margin-bottom: 90px;
+}
+
+section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+section p {
+    max-width: 800px;
+    line-height: 1.8;
+    color: var(--gray);
+}
+
+/* Cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+/* Skills */
+.skill {
+    margin-bottom: 15px;
+}
+
+.skill span {
+    display: block;
+    height: 8px;
+    background: #e5e7eb;
+    border-radius: 10px;
+}
+
+.skill span::after {
+    content: "";
+    display: block;
+    height: 8px;
+    background: var(--primary);
+    border-radius: 10px;
+}
+
+/* Timeline */
+.timeline {
+    border-left: 3px solid var(--primary);
+    padding-left: 20px;
+}
+
+.timeline-item {
+    margin-bottom: 25px;
+}
+
+.timeline-item h4 {
+    margin-bottom: 5px;
+}
+
+/* Blog */
+.blog-post {
+    margin-bottom: 25px;
+}
+
+/* Contact */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #cbd5f5;
+    border-radius: 8px;
+}
+
+button {
+    padding: 12px 25px;
+    background: var(--primary);
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    margin-top: 60px;
+    color: var(--gray);
+    text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Sidebar -->
+<aside>
+    <h2>Your Name</h2>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+</aside>
+
+<!-- Main -->
+<main>
+
+<section id="home">
+    <h1>Creative Developer & Designer</h1>
+    <p>I build structured, scalable, and visually refined digital experiences for the modern web.</p>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        I am a detail-oriented developer with experience in building educational, data-driven,
+        and user-focused applications. I enjoy writing clean code and creating meaningful learning resources.
+    </p>
+</section>
+
+<section id="services">
+    <h2>Services</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Web Development</h3>
+            <p>Modern, responsive websites using clean HTML, CSS, and JavaScript.</p>
+        </div>
+        <div class="card">
+            <h3>UI Design</h3>
+            <p>Minimal and accessible interfaces with strong visual hierarchy.</p>
+        </div>
+        <div class="card">
+            <h3>Educational Content</h3>
+            <p>Beginner-friendly tutorials and structured notebooks.</p>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Selected Projects</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Portfolio Platform</h3>
+            <p>Multi-section personal portfolio with sidebar navigation.</p>
+        </div>
+        <div class="card">
+            <h3>Data Visualization Notebook</h3>
+            <p>Interactive charts built using Python visualization libraries.</p>
+        </div>
+    </div>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skill">HTML<span style="width:90%"></span></div>
+    <div class="skill">CSS<span style="width:85%"></span></div>
+    <div class="skill">JavaScript<span style="width:75%"></span></div>
+    <div class="skill">Python<span style="width:80%"></span></div>
+</section>
+
+<section id="experience">
+    <h2>Experience</h2>
+    <div class="timeline">
+        <div class="timeline-item">
+            <h4>Web Developer</h4>
+            <p>2024 – Present</p>
+        </div>
+        <div class="timeline-item">
+            <h4>Teaching Assistant</h4>
+            <p>2023 – 2024</p>
+        </div>
+    </div>
+</section>
+
+<section id="blog">
+    <h2>Writing & Articles</h2>
+    <div class="blog-post">
+        <h4>How to Structure Beginner-Friendly Code</h4>
+        <p>Clear explanations, meaningful examples, and flow matter more than complexity.</p>
+    </div>
+    <div class="blog-post">
+        <h4>Why Clean UI Improves Learning</h4>
+        <p>Design is not decoration — it’s communication.</p>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Your Email">
+    <textarea rows="5" placeholder="Message"></textarea>
+    <button>Send Message</button>
+</section>
+
+<footer>
+    © 2026 Your Name — Designed with clarity.
+</footer>
+
+</main>
+
+</body>
+</html>
